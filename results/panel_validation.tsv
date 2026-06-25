@@ -1,0 +1,5 @@
+taxon	n_diag_kmers	sensitivity_heldout	challenges
+Snodgrassella_alvi	891	0.841	Neisseria gonorrhoeae=0.000; Kingella kingae=0.472
+Bacillus_oleronius	2558	0.898	Bacillus subtilis=0.000; Heyndrickxia coagulans=0.659
+Cutibacterium_kroppenstedtii	2490	0.978	Cutibacterium acnes=0.000; Corynebacterium diphtheriae=0.433
+Bartonella_quintana	776	0.739	Bartonella henselae=0.667; Brucella abortus=0.000

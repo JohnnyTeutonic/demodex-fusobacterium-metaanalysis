@@ -1,0 +1,17 @@
+tag	n_samples_total	n_nonempty	is_label_like	examples
+_title	96	96		dustap-gl-si1b_S144_L001_R2_001.fastq.gz | dustap-gl-si3b_S86_L001_R2_001.fastq.gz | dustap-gl-si5b_S62_L001_R2_001.fastq.gz | dustap-glue-1b_S161_L001_R1_001.fastq.gz | dustap-glue-1b_S161_L001_R2_001.fastq.gz
+_description	96	96		Human skin microbiome
+_alias	96	96		dustap-gl-si1b_S144_L001_R2_001.fastq.gz | dustap-gl-si3b_S86_L001_R2_001.fastq.gz | dustap-gl-si5b_S62_L001_R2_001.fastq.gz | dustap-glue-1b_S161_L001_R1_001.fastq.gz | dustap-glue-1b_S161_L001_R2_001.fastq.gz
+_scientific_name	96	96		Homo sapiens
+ena-checklist	96	96		ERC000011
+local environmental context	96	96		Human skin microbiome
+organism	96	96		Homo sapiens
+project name	96	96		dustap
+broad-scale environmental context	96	96		Human skin microbiome
+collection date	96	96		not provided
+geographic location (longitude)	96	96		not provided
+environmental medium	96	96		human skin
+geographic location (latitude)	96	96		not provided
+scientific_name	96	96		Homo sapiens
+common name	96	96		human
+geographic location (country and/or sea)	96	96	YES	Germany

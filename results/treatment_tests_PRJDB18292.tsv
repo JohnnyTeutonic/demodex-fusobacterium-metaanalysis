@@ -1,0 +1,11 @@
+stratum	n_pairs	n_down	n_up	median_pre	median_post	median_delta	wilcoxon_p	sign_test_p
+lesional / mite_index	6	2	4	0.003988	0.00635	0.000758	0.84375	0.6875
+lesional / Snodgrassella_alvi_frac	6	2	4	0.0001215	0.0004485	0.00030849999999999996	0.5625	0.6875
+lesional / Bacillus_oleronius_frac	6	2	4	0.0003505	0.0005510000000000001	0.00019549999999999998	0.84375	0.6875
+lesional / Cutibacterium_kroppenstedtii_frac	6	2	4	0.003399	0.0052595	0.0012960000000000003	0.84375	0.6875
+lesional / Bartonella_quintana_frac	6	0	0	0.0	0.0	0.0	1.0	
+non-lesional / mite_index	6	2	4	0.0093405	0.0033835000000000002	0.0007645	0.5625	0.6875
+non-lesional / Snodgrassella_alvi_frac	6	2	1	4e-05	0.0	0.0	1.0	1.0
+non-lesional / Bacillus_oleronius_frac	6	3	3	0.0006335	0.00046049999999999997	5.499999999999991e-06	1.0	1.0
+non-lesional / Cutibacterium_kroppenstedtii_frac	6	2	4	0.005369	0.0029130000000000002	0.0007585000000000001	0.4375	0.6875
+non-lesional / Bartonella_quintana_frac	6	2	0	0.0	0.0	0.0	0.5	0.5

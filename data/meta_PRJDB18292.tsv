@@ -1,0 +1,25 @@
+run_accession	sample_accession	sample_title	read_count	timepoint	lesional	host_subject_id	chem_administration	dermatology_disord	disease	disease state	description	fastq_ftp
+DRR574445	SAMD00794602	16S_Rosacea_4	5352	post	non-lesional	1	Ivermectin	Rosacea			Skin swab sample of non-lesional skin post-treatment with ivermectin	ftp.sra.ebi.ac.uk/vol1/fastq/DRR574/DRR574445/DRR574445.fastq.gz
+DRR574447	SAMD00794604	16S_Rosacea_6	13116	post	lesional	2	Ivermectin	Rosacea			Skin swab sample of lesional skin post-treatment with ivermectin	ftp.sra.ebi.ac.uk/vol1/fastq/DRR574/DRR574447/DRR574447.fastq.gz
+DRR574449	SAMD00794606	16S_Rosacea_8	12784	post	non-lesional	2	Ivermectin	Rosacea			Skin swab sample of non-lesional skin post-treatment with ivermectin	ftp.sra.ebi.ac.uk/vol1/fastq/DRR574/DRR574449/DRR574449.fastq.gz
+DRR574450	SAMD00794607	16S_Rosacea_9	7704	pre	lesional	3	Ivermectin	Rosacea			Skin swab sample of lesional skin pre-treatment	ftp.sra.ebi.ac.uk/vol1/fastq/DRR574/DRR574450/DRR574450.fastq.gz
+DRR574454	SAMD00794611	16S_Rosacea_13	12015	pre	lesional	4	Ivermectin	Rosacea			Skin swab sample of lesional skin pre-treatment	ftp.sra.ebi.ac.uk/vol1/fastq/DRR574/DRR574454/DRR574454.fastq.gz
+DRR574464	SAMD00794621	16S_Rosacea_23	7790	pre	non-lesional	6	Ivermectin	Rosacea			Skin swab sample of non-lesional skin pre-treatment	ftp.sra.ebi.ac.uk/vol1/fastq/DRR574/DRR574464/DRR574464.fastq.gz
+DRR574465	SAMD00794622	16S_Rosacea_24	10614	post	non-lesional	6	Ivermectin	Rosacea			Skin swab sample of non-lesional skin post-treatment with ivermectin	ftp.sra.ebi.ac.uk/vol1/fastq/DRR574/DRR574465/DRR574465.fastq.gz
+DRR574442	SAMD00794599	16S_Rosacea_1	24509	pre	lesional	1	Ivermectin	Rosacea			Skin swab sample of lesional skin pre-treatment	ftp.sra.ebi.ac.uk/vol1/fastq/DRR574/DRR574442/DRR574442.fastq.gz
+DRR574446	SAMD00794603	16S_Rosacea_5	11990	pre	lesional	2	Ivermectin	Rosacea			Skin swab sample of lesional skin pre-treatment	ftp.sra.ebi.ac.uk/vol1/fastq/DRR574/DRR574446/DRR574446.fastq.gz
+DRR574448	SAMD00794605	16S_Rosacea_7	9726	pre	non-lesional	2	Ivermectin	Rosacea			Skin swab sample of non-lesional skin pre-treatment	ftp.sra.ebi.ac.uk/vol1/fastq/DRR574/DRR574448/DRR574448.fastq.gz
+DRR574451	SAMD00794608	16S_Rosacea_10	11356	post	lesional	3	Ivermectin	Rosacea			Skin swab sample of lesional skin post-treatment with ivermectin	ftp.sra.ebi.ac.uk/vol1/fastq/DRR574/DRR574451/DRR574451.fastq.gz
+DRR574453	SAMD00794610	16S_Rosacea_12	15978	post	non-lesional	3	Ivermectin	Rosacea			Skin swab sample of non-lesional skin post-treatment with ivermectin	ftp.sra.ebi.ac.uk/vol1/fastq/DRR574/DRR574453/DRR574453.fastq.gz
+DRR574456	SAMD00794613	16S_Rosacea_15	16686	pre	non-lesional	4	Ivermectin	Rosacea			Skin swab sample of non-lesional skin pre-treatment	ftp.sra.ebi.ac.uk/vol1/fastq/DRR574/DRR574456/DRR574456.fastq.gz
+DRR574457	SAMD00794614	16S_Rosacea_16	11065	post	non-lesional	4	Ivermectin	Rosacea			Skin swab sample of non-lesional skin post-treatment with ivermectin	ftp.sra.ebi.ac.uk/vol1/fastq/DRR574/DRR574457/DRR574457.fastq.gz
+DRR574459	SAMD00794616	16S_Rosacea_18	28667	post	lesional	5	Ivermectin	Rosacea			Skin swab sample of lesional skin post-treatment with ivermectin	ftp.sra.ebi.ac.uk/vol1/fastq/DRR574/DRR574459/DRR574459.fastq.gz
+DRR574460	SAMD00794617	16S_Rosacea_19	49824	pre	non-lesional	5	Ivermectin	Rosacea			Skin swab sample of non-lesional skin pre-treatment	ftp.sra.ebi.ac.uk/vol1/fastq/DRR574/DRR574460/DRR574460.fastq.gz
+DRR574443	SAMD00794600	16S_Rosacea_2	10435	post	lesional	1	Ivermectin	Rosacea			Skin swab sample of lesional skin post-treatment with ivermectin	ftp.sra.ebi.ac.uk/vol1/fastq/DRR574/DRR574443/DRR574443.fastq.gz
+DRR574444	SAMD00794601	16S_Rosacea_3	8660	pre	non-lesional	1	Ivermectin	Rosacea			Skin swab sample of non-lesional skin pre-treatment	ftp.sra.ebi.ac.uk/vol1/fastq/DRR574/DRR574444/DRR574444.fastq.gz
+DRR574452	SAMD00794609	16S_Rosacea_11	12870	pre	non-lesional	3	Ivermectin	Rosacea			Skin swab sample of non-lesional skin pre-treatment	ftp.sra.ebi.ac.uk/vol1/fastq/DRR574/DRR574452/DRR574452.fastq.gz
+DRR574455	SAMD00794612	16S_Rosacea_14	11382	post	lesional	4	Ivermectin	Rosacea			Skin swab sample of lesional skin post-treatment with ivermectin	ftp.sra.ebi.ac.uk/vol1/fastq/DRR574/DRR574455/DRR574455.fastq.gz
+DRR574458	SAMD00794615	16S_Rosacea_17	13106	pre	lesional	5	Ivermectin	Rosacea			Skin swab sample of lesional skin pre-treatment	ftp.sra.ebi.ac.uk/vol1/fastq/DRR574/DRR574458/DRR574458.fastq.gz
+DRR574461	SAMD00794618	16S_Rosacea_20	18472	post	non-lesional	5	Ivermectin	Rosacea			Skin swab sample of non-lesional skin post-treatment with ivermectin	ftp.sra.ebi.ac.uk/vol1/fastq/DRR574/DRR574461/DRR574461.fastq.gz
+DRR574462	SAMD00794619	16S_Rosacea_21	22217	pre	lesional	6	Ivermectin	Rosacea			Skin swab sample of lesional skin pre-treatment	ftp.sra.ebi.ac.uk/vol1/fastq/DRR574/DRR574462/DRR574462.fastq.gz
+DRR574463	SAMD00794620	16S_Rosacea_22	9140	post	lesional	6	Ivermectin	Rosacea			Skin swab sample of lesional skin post-treatment with ivermectin	ftp.sra.ebi.ac.uk/vol1/fastq/DRR574/DRR574463/DRR574463.fastq.gz
