@@ -1,83 +1,81 @@
-# rosacea_demodex
+# demodex-fusobacterium-metaanalysis
 
-Bioinformatic support for the Demodex-burden / graded-treatment hypothesis in
-rosacea. The discovery pipeline is pure-Python (stdlib networking + stats);
-the confirmatory ASV step (E6) uses a faithful DADA2/R workflow under WSL2.
-Reuses the fetch/parse pattern from `../genetic_code`.
+A cross-cohort meta-analysis of the ocular-surface bacterial microbiome in
+*Demodex* disease. Three independent public cohorts are uniformly reprocessed
+from raw reads and combined to ask which genus-level associations *reproduce*
+across cohorts and across sequencing platforms, rather than analysing one new
+dataset in isolation.
 
-**Headline (after the E6 ASV upgrade):** the closed-reference $k$-mer index's
-apparent *S. alvi* signal is a conserved-region **cross-mapping artefact** --
-DADA2/SILVA finds zero *Snodgrassella* ASVs and the *S. alvi* k-mers land on
-commensal Neisseriaceae (92.5-94.5% identity). The real, species-resolved
-Demodex+ signal is a single **Neisseria ASV** (AUC 0.70, p=0.032). Closed-
-reference marker counting on short 16S is not species-specific; ASV resolution
-is required. See `FINDINGS.md` and `data/dada2_PRJNA692647/E6_SUMMARY.md`.
+**Headline:** *Fusobacterium* is depleted in *Demodex* disease concordantly in
+all three cohorts (per-cohort ROC-AUC 0.33 / 0.31 / 0.36; sqrt(*n*)-weighted
+Stouffer combined *Z* = -2.93, *p* = 0.0034, Benjamini-Hochberg *q* = 0.088). It
+is the top-ranked genus overall and the only one that stays significant
+(*p* < 0.05) in every leave-one-cohort-out, and in the shotgun cohort the
+depletion is independent of host-DNA fraction and sequencing depth.
+*Corynebacterium* is concordantly (but weakly) enriched. Genera prominent in
+individual cohorts (*Neisseria*, *Rothia*, *Streptococcus*) do **not** replicate,
+reversing direction between studies. Manuscript:
+`fusobacterium_demodex_metaanalysis.tex`.
+
+## Cohorts (111 subjects: 69 Demodex, 42 control)
+| label | accession | platform / target | Demodex | control |
+|---|---|---|---|---|
+| discovery   | PRJNA692647 | Illumina 16S V4 (515F/806R)      | 14 | 17 |
+| rep2020     | PRJNA657256 | Illumina MiSeq 16S V3-V4 (338F/806R) | 30 | 14 |
+| shotgun2022 | PRJNA856121 | Illumina shotgun WGS (75 bp)     | 25 | 11 |
 
 ## Layout
-- `PLAN.md`      -- project plan and panel rationale
-- `FINDINGS.md`  -- headline results and conclusions (read this)
-- `scripts/`     -- pipeline (each has `--self-test`)
-- `data/`        -- cached fetches, k-mer panels, per-sample indices
-- `results/`     -- E0/E3/E4 write-ups + test tables
+- `fusobacterium_demodex_metaanalysis.tex` -- the manuscript
+- `scripts/dada2/` -- full pipeline (16S DADA2, shotgun Kraken2/Bracken, meta-analysis)
+- `results/`       -- figures and per-cohort / meta-analysis tables
+- `data/`          -- cached genus tables and intermediates
 
 ## Pipeline (run order)
+**16S cohorts (discovery, rep2020):**
 ```
-# E0  data-availability audit (NCBI E-utilities)
-python scripts/sra_audit.py
-python scripts/summarize_audit.py            # -> results/project_summary.tsv
-
-# E1  reference 16S + diagnostic, body-site-matched background-subtracted k-mers
-python scripts/fetch_references.py           # -> data/refs, data/kmers
-python scripts/validate_panel.py             # E5: sensitivity/specificity control
-
-# E2  per-project metadata + molecular mite-burden index (streams ENA FASTQ)
-python scripts/fetch_metadata.py --project PRJDB18292
-python scripts/build_index.py   --project PRJDB18292
-python scripts/fetch_metadata.py --project PRJNA692647
-python scripts/build_index.py   --project PRJNA692647
-
-# E3/E4  analyses
-python scripts/analyze_treatment.py          # ivermectin before/after
-python scripts/analyze_validation.py         # Demodex+ vs control
-
-# Figure  ROC: naive (skin-only) vs corrected (body-site-matched)
-#   first regenerate the naive ocular index into a separate file:
-python scripts/fetch_references.py --skin-only --out-dir data/kmers_naive
-python scripts/build_index.py --project PRJNA692647 \
-       --kmers-dir data/kmers_naive --out data/index_PRJNA692647_naive.tsv
-python scripts/make_roc_figure.py            # -> results/fig_roc_validation.pdf
-
-# E6  exact-sequence (ASV) re-analysis -- DADA2/R under WSL2 (see scripts/dada2/)
-Rscript scripts/dada2/install_dada2.R        # one-time: dada2 into a user lib
-bash    scripts/dada2/fetch_fastqs.sh PRJNA692647   # FASTQs + SILVA refs + sheet
-bash    scripts/dada2/cut_primers.sh         # cutadapt 515F/806R removal
-Rscript scripts/dada2/run_dada2.R            # -> data/dada2_PRJNA692647/*
-python  scripts/dada2/analyze_asv.py         # ASV group test (E6)
-python  scripts/dada2/bridge_kmer_asv.py     # k-mer panel applied to ASVs (E6b)
-python  scripts/dada2/identity_check.py      # ASV-vs-S.alvi identity (E6c)
+bash    scripts/dada2/fetch_fastqs.sh PRJNA692647   # discovery FASTQs + SILVA + sheet
+bash    scripts/dada2/fetch_657256.sh               # rep2020 FASTQs + sheet
+bash    scripts/dada2/cut_primers.sh                # cutadapt 515F/806R (V4)
+bash    scripts/dada2/cut_primers_v3v4.sh           # cutadapt 338F/806R (V3-V4)
+Rscript scripts/dada2/run_dada2.R                   # DADA2 -> ASV genus tables
+```
+**Shotgun cohort (shotgun2022):**
+```
+bash   scripts/dada2/fetch_856_conj.sh   # conjunctival WGS runs
+bash   scripts/dada2/fetch_k2db.sh       # Kraken2 standard database
+bash   scripts/dada2/build_tools.sh      # build Kraken2 + Bracken
+bash   scripts/dada2/classify_856.sh     # Kraken2 classify + Bracken (genus)
+python scripts/dada2/agg_bracken.py      # aggregate per-sample genus table
+python scripts/dada2/sensitivity_856.py  # host-DNA / depth confounder tests
+```
+**Meta-analysis + figure:**
+```
+python scripts/dada2/cross_cohort_concordance.py \
+    --cohort <discovery_out>:<discovery_sheet>:discovery \
+    --cohort <rep_out>:<rep_sheet>:rep2020 \
+    --cohort <shotgun_out>:<shotgun_sheet>:shotgun2022 \
+    --min-prev 0.5 --out results/meta3.md
+python scripts/dada2/make_forest.py      # -> results/fig_meta_auc.png
 ```
 
-Key result: the $k$-mer composite gave a borderline Demodex+ vs control signal
-(AUC 0.66) apparently carried by *S. alvi* -- but the **E6 DADA2/ASV upgrade
-overturned it** (cross-mapping artefact; the real lead is a *Neisseria* ASV,
-AUC 0.70, p=0.032). The ivermectin arm is null. See `FINDINGS.md`.
+## Methods
+- **16S:** cutadapt primer removal; DADA2 denoising to amplicon sequence
+  variants (ASVs); SILVA v138.1 taxonomy; collapsed to genus.
+- **Shotgun:** Kraken2 (standard DB) + Bracken genus re-estimation, restricted
+  to the Bacteria lineage so abundances are comparable to the 16S cohorts.
+- **Meta-analysis:** per-cohort tie-corrected Mann-Whitney signed *z*;
+  sqrt(*n*)-weighted Stouffer combined *Z* over the genera present in >= 50% of
+  samples in *every* cohort; Benjamini-Hochberg FDR; leave-one-cohort-out
+  robustness. Concordant = same direction in all cohorts.
 
-## Self-tests (offline, no network)
-```
-python scripts/sra_audit.py        --self-test
-python scripts/summarize_audit.py  --self-test
-python scripts/fetch_references.py --self-test
-python scripts/validate_panel.py   --self-test
-python scripts/fetch_metadata.py   --self-test
-python scripts/build_index.py      --self-test
-python scripts/make_roc_figure.py  --self-test
-python scripts/probe_labels.py     --self-test   # PRJEB82826 label probe
-python scripts/dada2/analyze_asv.py     --self-test
-python scripts/dada2/bridge_kmer_asv.py --self-test
-```
+## References
+Manuscript bibliography is fetched programmatically from Crossref via
+`scripts/dada2/refs_fetch.py` (no hand-entered author/year/DOI metadata).
 
 ## Notes
-- Networked steps are read-only GETs to NCBI E-utilities and EBI ENA.
-- `build_index.py` retries each FASTQ up to 3x on transient timeouts.
-- Index = closed-reference diagnostic-k-mer attribution (>=2 k-mers/read),
-  a relative proxy, NOT an ASV census. See `FINDINGS.md` for caveats.
+- Networked steps are read-only downloads from ENA/NCBI.
+- All statistics are pure-Python (Mann-Whitney *U*, Stouffer *Z*,
+  Benjamini-Hochberg, Spearman) in `cross_cohort_concordance.py` and
+  `sensitivity_856.py`.
+- `scripts/` also retains the earlier single-cohort exploratory code; the
+  three-cohort meta-analysis above supersedes it.

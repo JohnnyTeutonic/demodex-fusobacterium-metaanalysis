@@ -1,0 +1,15 @@
+tag	n_samples_total	n_nonempty	is_label_like	examples
+_error	72	37		URLError(ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)) | URLError(gaierror(11001, 'getaddrinfo failed'))
+_title	72	35		S012010090008 | S012010090007 | S012012180028 | S012012180027 | S012012180023
+_alias	72	35		S012010090008 | S012010090007 | S012012180028 | S012012180027 | S012012180023
+_scientific_name	72	35		human metagenome
+collection_date	72	35		not collected
+replicate	72	35		P_A4 | P_B3 | H_B9 | H1_A9 | H1_A7
+ena-first-public	72	35		2022-07-07
+organism	72	35		human metagenome
+ena-last-update	72	35		2022-07-07
+host	72	35		Homo sapiens
+biosamplemodel	72	35		Metagenome or environmental
+geo_loc_name	72	35		not collected
+lat_lon	72	35		not collected
+isolation_source	72	35		Conjunctival sac | meibum

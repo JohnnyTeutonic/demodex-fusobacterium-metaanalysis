@@ -4,8 +4,8 @@
 set -uo pipefail
 
 cd "$(dirname "$0")/.." || exit 1
-SRC="demodex_surrogate_16S.tex"
-OUT="demodex_surrogate_16S.docx"
+SRC="fusobacterium_demodex_metaanalysis.tex"
+OUT="fusobacterium_demodex_metaanalysis.docx"
 
 echo "== tool check =="
 if command -v pandoc >/dev/null 2>&1; then
@@ -25,4 +25,7 @@ if [ "$HAVE_PANDOC" = "1" ]; then
     --resource-path=.:results 2>pandoc.log \
     && echo "WROTE $OUT" \
     || { echo "pandoc FAILED; see pandoc.log"; tail -20 pandoc.log; }
+  # Pandoc flattens the manual thebibliography into one run-on paragraph;
+  # rebuild it as a clean numbered list.
+  python3 "$(dirname "$0")/fix_docx_refs.py" "$OUT" || echo "ref fix skipped"
 fi

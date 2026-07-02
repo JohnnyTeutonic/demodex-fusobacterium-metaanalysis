@@ -1,0 +1,20 @@
+tag	n_samples_total	n_nonempty	is_label_like	examples
+_title	76	76		MIMARKS Survey related sample from human eye metagenome
+_description	76	76		Keywords: GSC:MIxS;MIMARKS:5.0
+_alias	76	76		SS-25_21 | SS-23_19 | SS-3_91 | SS-20_16 | SS-17_13
+_scientific_name	76	76		human eye metagenome
+eye	76	76		R | L | NA
+collection_date	76	76		2018-01-31 | 2018-05-16 | 2018-02-07 | 2018-04-11 | 2018-01-03
+insdc secondary accession	76	76		SRS8081278 | SRS8081276 | SRS8081274 | SRS8081272 | SRS8081269
+ncbi submission package	76	76		MIMARKS.survey.human-associated.5.0
+labid	76	76		MN-IC-C | KL-IC-C | AB-IC-C | GH-IC-C | IJ-IC-C
+organism	76	76		human eye metagenome
+env_broad_scale	76	76		Human eye
+host	76	76		Homo sapiens
+geo_loc_name	76	76		USA: Arizona
+env_medium	76	76		Tear
+lat_lon	76	76		33.49 N 111.93 W
+env_local_scale	76	76		Human eye
+biosamplemodel	76	76		MIMARKS.survey
+ena-first-public	76	76		2021-02-10
+ena-last-update	76	76		2021-02-10 | 2021-02-28

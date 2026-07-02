@@ -1,0 +1,18 @@
+tag	n_samples_total	n_nonempty	is_label_like	examples
+_title	93	93		MIMARKS Survey related sample from metagenome
+_description	93	93		Keywords: GSC:MIxS;MIMARKS:6.0
+_alias	93	93		Skin4b | Stool9 | Blood15 | Blood3 | Blood22
+_scientific_name	93	93		metagenome
+collection_date	93	93		2021-05-17 | 2021-12-12 | 2021-05-19 | 2021-11-04 | 2021-10-18
+insdc secondary accession	93	93		SRS23318441 | SRS23318440 | SRS23318431 | SRS23318423 | SRS23318422
+ncbi submission package	93	93		MIMARKS.survey.human-associated.6.0
+organism	93	93		metagenome
+env_broad_scale	93	93		hospital
+host	93	93		Homo sapiens
+geo_loc_name	93	93		Hungary
+env_medium	93	93		skin | stool | blood
+lat_lon	93	93		47.29 N 19.04 E
+env_local_scale	93	93	YES	outpatient examination room
+biosamplemodel	93	93		MIMARKS.survey
+ena-first-public	93	93		2025-12-19
+ena-last-update	93	93		2025-12-19

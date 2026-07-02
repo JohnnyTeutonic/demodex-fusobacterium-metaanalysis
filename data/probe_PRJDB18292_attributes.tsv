@@ -1,0 +1,22 @@
+tag	n_samples_total	n_nonempty	is_label_like	examples
+_title	24	24	YES	16S_Rosacea_4 | 16S_Rosacea_6 | 16S_Rosacea_8 | 16S_Rosacea_9 | 16S_Rosacea_13
+_description	24	24	YES	Skin swab sample of non-lesional skin post-treatment with ivermectin | Skin swab sample of lesional skin post-treatment with ivermectin | Skin swab sample of lesional skin pre-treatment | Skin swab sample of non-lesional skin pre-treatment
+_alias	24	24		SAMD00794602 | SAMD00794604 | SAMD00794606 | SAMD00794607 | SAMD00794611
+_scientific_name	24	24		metagenome
+collection_date	24	24		2019-04
+insdc secondary accession	24	24		DRS392898 | DRS392900 | DRS392902 | DRS392903 | DRS392907
+organism	24	24		metagenome
+env_broad_scale	24	24		biome [ENVO:00000428]
+env_local_scale	24	24		skin environment [ENVO:2100006 | skin environment [ENVO:2100008 | skin environment [ENVO:2100010 | skin environment [ENVO:2100011 | skin environment [ENVO:2100015
+dermatology_disord	24	24	YES	Rosacea
+host_subject_id	24	24		1 | 2 | 3 | 4 | 6
+ncbi submission package	24	24		MIMS.me.human-skin.6.0
+host	24	24		Homo sapiens
+geo_loc_name	24	24		USA:California, San Diego, UC San Diego Medical Center
+chem_administration	24	24		Ivermectin
+env_medium	24	24		skin epidermis [UBERON_0001003]
+lat_lon	24	24		32.7578 N 117.1661 W
+sample_name	24	24	YES	16S-Rosacea_4 | 16S-Rosacea_6 | 16S-Rosacea_8 | 16S-Rosacea_9 | 16S-Rosacea_13
+biosamplemodel	24	24		MIMS.me.human-skin
+ena-first-public	24	24		2024-06-25
+ena-last-update	24	24		2024-06-27

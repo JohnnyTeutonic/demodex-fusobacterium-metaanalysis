@@ -1,0 +1,9 @@
+taxon	n_refs	n_kmers_raw	n_kmers_diagnostic	demodex_associated
+Snodgrassella_alvi	8	1310	815	True
+Neisseria	8	3066	2052	True
+Eikenella_corrodens	8	2098	1163	True
+Bacillus_oleronius	8	3643	2528	True
+Bartonella_quintana	8	1583	776	True
+Cutibacterium_kroppenstedtii	8	3200	2490	False
+Cutibacterium_acnes	8	1415	712	False
+Staphylococcus_epidermidis	8	1729	345	False

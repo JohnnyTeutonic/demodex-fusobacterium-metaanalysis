@@ -103,7 +103,7 @@ def make_figure() -> str:
     pdf = os.path.join(RESULTS_DIR, "fig_roc_validation.pdf")
     png = os.path.join(RESULTS_DIR, "fig_roc_validation.png")
     fig.savefig(pdf)
-    fig.savefig(png, dpi=200)
+    fig.savefig(png, dpi=300)
     plt.close(fig)
     print(f"Wrote {pdf}\nWrote {png}")
     return pdf

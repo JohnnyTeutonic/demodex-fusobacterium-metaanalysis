@@ -1,0 +1,18 @@
+tag	n_samples_total	n_nonempty	is_label_like	examples
+_title	42	42		human eye metagenome
+_alias	42	42		XBS73 | XBS70 | XBS10 | XBS52 | XBS51
+_scientific_name	42	42		human eye metagenome
+collection_date	42	42		2021-10 | 2021-07 | 2021-09 | 2021-08
+organism	42	42		human eye metagenome
+env_broad_scale	42	42		not collected
+biosamplemodel	42	42		MIMS.me
+env_local_scale	42	42		ocular surface
+isolate	42	42		United Therapeutics 73 | artificial tears 70 | AntiBiotics 10 | United Therapeutics 52 | United Therapeutics 51
+ena-first-public	42	42		2022-09-15
+ena-last-update	42	42		2022-09-15
+drug_usage	42	42		United Therapeutics 73 | artificial tears 70 | AntiBiotics 10 | United Therapeutics 52 | United Therapeutics 51
+host	42	42		Homo sapiens
+geo_loc_name	42	42		China: Shanxi
+env_medium	42	42		not collected
+lat_lon	42	42		37.54 N 112.33 E
+isolation_source	42	42		not collected

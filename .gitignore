@@ -11,7 +11,3 @@
 # scratch
 build*.log
 pandoc.log
-
-# Python
-__pycache__/
-*.pyc
